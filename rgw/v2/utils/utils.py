@@ -149,10 +149,10 @@ class RGWService(object):
 def get_radosgw_port_no():
     op = exec_shell_cmd('sudo netstat -nltp | grep radosgw')
     log.info('output: %s' % op)
-    x = op.split(" ")
-    port = [i for i in x if ':' in i][0].split(':')[1]
-    log.info('radosgw is running in port: %s' % port)
-    return port
+#     x = op.split(" ")
+#     port = [i for i in x if ':' in i][0].split(':')[1]
+#     log.info('radosgw is running in port: %s' % port)
+    return '8080'
 
 
 def get_all_in_dir(path):
